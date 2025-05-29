@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Survey Form of  ABC School</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main>
+            <div class="survey-form">
+            <h1 id="title">Survey Form of  ABC School</h1>
+            <p id="description">You can submit your surveys below.</p>
+            <form id="survey-form" action="data_survey.php" method="post">
+                <fieldset>
+                    <legend>Personal Information:</legend>
+                    <label id="name-label" for="name">Name*: <input name="name" id="name" type="text" placeholder="John Smith" required></label><br>
+                    <label id="email-label" for="email">Email*: <input name="email" id="email" type="email" placeholder="johnsmith@email.com" required></label><br>
+                    <label id="number-label" for="number">Age (optional): <input name="age" id="number" type="number" min="1" max="150" placeholder="43"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Concerns</legend>
+                    <label id="dropdown-label" for="dropdown">Choose one below:*</label>
+                    <select name="occupation" id="dropdown">
+                        <option value="">(select one)</option>
+                        <option value="Student">Student</option>
+                        <option value="Professor">Professor</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Guest">Guest</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <label id="concern-label">What is your concern?*</label><br>
+                    <label for="concern1"><input id="concern1" type="radio" value="Academic" name="concerns" checked>Academic</label>
+                    <label for="concern2"><input id="concern2" type="radio" value="Financial" name="concerns">Financial</label>
+                    <label for="concern3"><input id="concern3" type="radio" value="Social Life" name="concerns">Social Life</label>
+                    <label for="concern4"><input id="concern4" type="radio" value="Other" name="concerns">Other</label>
+                    <textarea name="details" placeholder="Write your concern in details (optional)..."></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Improvements</legend>
+                    <label>What areas would you like the school to improve? (optional)</label><br>
+                    <label for="improvement1"><input id="improvement1" type="checkbox" value="Facilities name="improvements[]">Facilities</label><br>
+                    <label for="improvement2"><input id="improvement2" type="checkbox" value="Extracurricular activities" name="improvements[]">Extracurricular activities</label><br>
+                    <label for="improvement3"><input id="improvement3" type="checkbox" value="Teaching methods" name="improvements[]">Teaching methods</label><br>
+                    <label for="improvement4"><input id="improvement4" type="checkbox" value="School meals" name="improvements[]">School meals</label><br>
+                    <label for="improvement5"><input id="improvement5" type="checkbox" value="Security and safety" name="improvements[]">Security and safety</label><br>
+                    <label for="improvement6"><input id="improvement6" type="checkbox" value="Internet/Wi-Fi access" name="improvements[]">Internet/Wi-Fi access</label><br>
+                    <label for="improvement7"><input id="improvement7" type="checkbox" value="Library resources" name="improvements[]">Library resources</label><br>
+                    <label for="improvement8"><input id="improvement8" type="checkbox" value="Counseling services" name="improvements[]">Counseling services</label><br>
+                    <label for="improvement9"><input id="improvement9" type="checkbox" value="Other" name="improvements[]">Other</label>
+                </fieldset>
+                <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required>I have read and accepted the terms and conditions</label>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+            </div>
+        </main>
+    </body>
+</html>
